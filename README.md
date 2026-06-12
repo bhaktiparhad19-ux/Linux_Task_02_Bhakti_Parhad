@@ -4,7 +4,7 @@
 
 **Name:** Bhakti Mahadev Parhad
 
-**Internship:** White Band Associates Summer Internship Cyber Security
+**Internship:** White Band Associates Summer Internship - Cyber Security
 
 **Task:** Linux Task 02 - Users, Groups & File Permissions
 
@@ -18,10 +18,9 @@ These concepts form the foundation of Linux security and system administration.
 
 ---
 
-
 # Part A - Understanding Users
 
-Commands Executed:
+## Commands Executed
 
 ```bash
 whoami
@@ -29,57 +28,70 @@ id
 cat /etc/passwd
 ```
 
-Tasks Completed:
+## Tasks Completed
 
-* Identified current username.
+* Identified the current logged-in user.
 * Observed User ID (UID).
 * Observed Group ID (GID).
-* Reviewed user account information stored in /etc/passwd.
+* Reviewed user account information stored in `/etc/passwd`.
 
-Screenshots:
+## Screenshots
 
-* whoami.png
-* id.png
-* cat_etc_passwd.png
+### whoami Output
+
+![whoami](Screenshots_linux_02/whoami.png)
+
+### id Output
+
+![id](Screenshots_linux_02/id.png)
+
+### cat /etc/passwd Output
+
+![cat\_etc\_passwd](Screenshots_linux_02/cat_etc_passwd.png)
 
 ---
 
 # Part B - Create Users & Groups
 
-Groups Created:
+## Groups Created
 
 * interns
 * cyberteam
 
-Users Created:
+## Users Created
 
 * student1
 * student2
 * student3
 
-Tasks Completed:
+## Tasks Completed
 
-* Created groups.
-* Created users.
-* Assigned users to groups.
-* Verified group membership using groups and id commands.
+* Created Linux groups.
+* Created Linux users.
+* Added users to groups.
+* Verified user and group membership.
 
-Screenshots:
+## Screenshots
 
-* groups_users.png
-* group_user_verification.png
+### Groups Creation and User Creation
+
+![groups\_users](Screenshots_linux_02/groups_users.png)
+
+### User and Group Verification
+
+![group\_user\_verification](Screenshots_linux_02/group_user_verification.png)
 
 ---
 
 # Part C - File Ownership
 
-Project Directory Created:
+## Project Directory
 
 ```text
 CyberSecurity_Project
 ```
 
-Files Created:
+## Files Created
 
 ```text
 report.txt
@@ -87,27 +99,33 @@ notes.txt
 credentials.txt
 ```
 
-Tasks Completed:
+## Tasks Completed
 
-* Verified file ownership using ls -l.
-* Changed ownership of a file using chown.
+* Checked file ownership using `ls -l`.
+* Changed ownership of a file using `chown`.
 * Verified ownership changes.
 
-Screenshot:
+## Screenshots
 
-* file_ownership_file_permission.png
+### File Ownership Before Change
+
+![file\_ownership\_before](Screenshots_linux_02/file_ownership_before.png)
+
+### File Ownership After Change
+
+![file\_ownership\_after](Screenshots_linux_02/file_ownership_after.png)
 
 ---
 
 # Part D - File Permissions
 
-File Created:
+## File Created
 
 ```text
 security_policy.txt
 ```
 
-Permission Changes Performed:
+## Permission Changes Performed
 
 | Permission Type | Permission |
 | --------------- | ---------- |
@@ -115,7 +133,7 @@ Permission Changes Performed:
 | Read & Write    | rw-rw-r--  |
 | Full Access     | rwxrwxrwx  |
 
-Commands Used:
+## Commands Used
 
 ```bash
 chmod 444 security_policy.txt
@@ -123,21 +141,31 @@ chmod 664 security_policy.txt
 chmod 777 security_policy.txt
 ```
 
-Tasks Completed:
+## Tasks Completed
 
-* Checked existing permissions.
-* Modified permissions using chmod.
-* Verified permission changes using ls -l.
+* Checked current permissions using `ls -l`.
+* Modified permissions using `chmod`.
+* Verified permission changes.
 
-Screenshot:
+## Screenshots
 
-* file_ownership_file_permission.png
+### Read Only Permission (444)
+
+![permissions\_444](Screenshots_linux_02/permissions_444.png)
+
+### Read & Write Permission (664)
+
+![permissions\_664](Screenshots_linux_02/permissions_664.png)
+
+### Full Access Permission (777)
+
+![permissions\_777](Screenshots_linux_02/permissions_777.png)
 
 ---
 
 # Part E - Permission Analysis
 
-Permissions Studied:
+The following permissions were analyzed:
 
 * 755
 * 644
@@ -145,7 +173,7 @@ Permissions Studied:
 * 600
 * 700
 
-For each permission the following were analyzed:
+For each permission the following were explained:
 
 * Owner Rights
 * Group Rights
@@ -164,12 +192,14 @@ Permission_Analysis.txt
 
 Recommended permissions were assigned for:
 
-* password_backup.txt
-* public_notice.txt
-* system_log.txt
-* personal_notes.txt
+| File Name           | Recommended Permission |
+| ------------------- | ---------------------- |
+| password_backup.txt | 600                    |
+| public_notice.txt   | 644                    |
+| system_log.txt      | 640                    |
+| personal_notes.txt  | 600                    |
 
-Each permission was selected based on security requirements and the Principle of Least Privilege.
+The permissions were selected based on security requirements and the Principle of Least Privilege (PoLP).
 
 Detailed answers are available in:
 
@@ -181,12 +211,12 @@ Security_Challenge.txt
 
 # Part G - Linux Security Research
 
-Research Topics Covered:
+The following topics were researched:
 
-* Importance of File Permissions
-* Risks of 777 Permissions
+* Why file permissions are important
+* Risks of assigning 777 permissions to sensitive files
 * Principle of Least Privilege (PoLP)
-* Reasons Organizations Restrict User Access
+* Why organizations restrict user access
 
 Detailed answers are available in:
 
@@ -195,6 +225,7 @@ Research_Answers.txt
 ```
 
 ---
+
 
 # Concepts Learned
 
@@ -209,7 +240,7 @@ During this task I learned:
 * chown Command
 * Numeric Permissions
 * Symbolic Permissions
-* Principle of Least Privilege
+* Principle of Least Privilege (PoLP)
 * Linux Security Basics
 
 ---
@@ -219,5 +250,3 @@ During this task I learned:
 This task provided hands-on experience with Linux user management, group management, file ownership, and permissions.
 
 Understanding these concepts is essential for securing Linux systems and forms a strong foundation for future cybersecurity and system administration tasks.
-
----
