@@ -16,37 +16,6 @@ These concepts form the foundation of Linux security and system administration.
 
 ---
 
-# Folder Structure
-
-Linux_Task_02_Bhakti_Parhad/
-
-├── README.md
-
-├── Commands_Used.txt
-
-├── Permission_Analysis.txt
-
-├── Security_Challenge_Answers.txt
-
-├── Research_Answers.txt
-
-└── Screenshots_linux_02/
-
-    ├── whoami.png
-
-    ├── id.png
-
-    ├── cat_etc_passwd.png
-
-    ├── groups_users.png
-
-    ├── group_user_verification.png
-
-    ├── file_ownership.png
-
-    ├── file_permissions.png
-
----
 
 # Part A - Understanding Users
 
