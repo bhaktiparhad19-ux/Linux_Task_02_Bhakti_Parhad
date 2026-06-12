@@ -39,15 +39,15 @@ cat /etc/passwd
 
 ### whoami Output
 
-![whoami](Screenshots_linux_02/whoami.png)
+![whoami](Linux_Task_02_Bhakti_Parhad/Screenshots_linux_02/whoami.png)
 
 ### id Output
 
-![id](Screenshots_linux_02/id.png)
+![id](Linux_Task_02_Bhakti_Parhad/Screenshots_linux_02/id.png)
 
 ### cat /etc/passwd Output
 
-![cat\_etc\_passwd](Screenshots_linux_02/cat_etc_passwd.png)
+![cat\_etc\_passwd](Linux_Task_02_Bhakti_Parhad/Screenshots_linux_02/cat_etc_passwd.png)
 
 ---
 
@@ -75,11 +75,11 @@ cat /etc/passwd
 
 ### Groups Creation and User Creation
 
-![groups\_users](Screenshots_linux_02/groups_users.png)
+![groups\_users](Linux_Task_02_Bhakti_Parhad/Screenshots_linux_02/groups_users.png)
 
 ### User and Group Verification
 
-![group\_user\_verification](Screenshots_linux_02/group_user_verification.png)
+![group\_user\_verification](Linux_Task_02_Bhakti_Parhad/Screenshots_linux_02/group_user_verification.png)
 
 ---
 
@@ -109,11 +109,7 @@ credentials.txt
 
 ### File Ownership Before Change
 
-![file\_ownership\_before](Screenshots_linux_02/file_ownership_before.png)
-
-### File Ownership After Change
-
-![file\_ownership\_after](Screenshots_linux_02/file_ownership_after.png)
+![file\_ownership\_before](Linux_Task_02_Bhakti_Parhad/Screenshots_linux_02/file_ownership.png)
 
 ---
 
@@ -151,15 +147,7 @@ chmod 777 security_policy.txt
 
 ### Read Only Permission (444)
 
-![permissions\_444](Screenshots_linux_02/permissions_444.png)
-
-### Read & Write Permission (664)
-
-![permissions\_664](Screenshots_linux_02/permissions_664.png)
-
-### Full Access Permission (777)
-
-![permissions\_777](Screenshots_linux_02/permissions_777.png)
+![permissions\_444](Linux_Task_02_Bhakti_Parhad/Screenshots_linux_02/file_permissions.png)
 
 ---
 
