@@ -1,0 +1,91 @@
+LINUX TASK 02 - SUMMER INTERNSHIP
+
+PART G - LINUX SECURITY RESEARCH
+
+Topic : Importance of File Permissions and Access Control
+
+****************************************************************
+
+1. Why are File Permissions Important?
+
+Answer :
+
+File permissions are important because they control who can
+read, modify or execute files and directories in a Linux
+system. They help protect sensitive information from
+unauthorized access and prevent accidental changes to
+important files.
+
+Without proper permissions, any user could view, edit or
+delete critical system files, which could lead to security
+problems or system failure.
+
+****************************************************************
+
+2. What Happens if Sensitive Files are Given 777 Permissions?
+
+Answer :
+
+Permission 777 gives full access (Read, Write and Execute)
+to the owner, group and all other users on the system.
+
+If a sensitive file is assigned 777 permissions, any user
+can view, modify or delete the file. This creates a major
+security risk because confidential information can be
+stolen, altered or destroyed.
+
+For example, if a password file has 777 permissions,
+unauthorized users could access or modify the passwords,
+leading to account compromise and security breaches.
+
+****************************************************************
+
+3. What is the Principle of Least Privilege (PoLP)?
+
+Answer :
+
+The Principle of Least Privilege (PoLP) states that users,
+applications and processes should be given only the minimum
+permissions required to perform their tasks.
+
+Users should not receive access to files, directories or
+resources that are not necessary for their work.
+
+This principle helps reduce security risks, prevents
+unauthorized actions and limits the damage that can occur
+if an account is compromised.
+
+****************************************************************
+
+4. Why Do Organizations Restrict User Access?
+
+Answer :
+
+Organizations restrict user access to protect sensitive
+data and maintain system security.
+
+Not every employee needs access to all files and systems.
+Access is granted based on job roles and responsibilities.
+
+Restricting access helps organizations:
+
+1. Protect confidential information.
+2. Prevent unauthorized access.
+3. Reduce insider threats.
+4. Prevent accidental modifications or deletion of data.
+5. Maintain compliance with security policies.
+
+****************************************************************
+
+CONCLUSION :
+
+File permissions are one of the most important security
+features in Linux. They help control access to files,
+protect sensitive information and ensure that users only
+have the permissions required for their work.
+
+By following proper permission management and the Principle
+of Least Privilege, organizations can improve security,
+reduce risks and protect critical system resources.
+
+****************************************************************

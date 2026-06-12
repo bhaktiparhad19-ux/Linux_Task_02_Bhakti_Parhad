@@ -1,0 +1,125 @@
+LINUX TASK 02 - SUMMER INTERNSHIP
+
+PART F - SECURITY CHALLENGE
+
+Scenario :
+
+As a Linux Administrator, file permissions should be assigned
+based on the sensitivity of the data and the number of users
+who need access to the file.
+
+****************************************************************
+
+1. password_backup.txt
+
+Recommended Permission : 600
+
+Owner Rights      : Read, Write
+Group Rights      : No Access
+Other User Rights : No Access
+
+Reason :
+
+This file may contain passwords or sensitive account
+information. Only the owner should be able to read
+or modify the file. No other user should have access.
+
+Example :
+
+-rw------- password_backup.txt
+
+****************************************************************
+
+2. public_notice.txt
+
+Recommended Permission : 644
+
+Owner Rights      : Read, Write
+Group Rights      : Read Only
+Other User Rights : Read Only
+
+Reason :
+
+A public notice should be readable by everyone,
+but only the owner should be allowed to make changes.
+
+Example :
+
+-rw-r--r-- public_notice.txt
+
+****************************************************************
+
+3. system_log.txt
+
+Recommended Permission : 640
+
+Owner Rights      : Read, Write
+Group Rights      : Read Only
+Other User Rights : No Access
+
+Reason :
+
+System log files may contain important system and
+security information. Administrators in the group
+can view the logs, but regular users should not
+have access.
+
+Example :
+
+-rw-r----- system_log.txt
+
+****************************************************************
+
+4. personal_notes.txt
+
+Recommended Permission : 600
+
+Owner Rights      : Read, Write
+Group Rights      : No Access
+Other User Rights : No Access
+
+Reason :
+
+Personal notes may contain private information.
+Only the owner should be able to access and edit
+the file.
+
+Example :
+
+-rw------- personal_notes.txt
+
+****************************************************************
+
+SECURITY CHALLENGE SUMMARY :
+
+File Name             Permission   Reason
+
+password_backup.txt   600          Protects sensitive password data
+
+public_notice.txt     644          Everyone can read, only owner can edit
+
+system_log.txt        640          Admin group can view logs, others cannot
+
+personal_notes.txt    600          Keeps personal information private
+
+****************************************************************
+
+SECURITY PRINCIPLE USED :
+
+Principle of Least Privilege (PoLP)
+
+Definition :
+
+Users should be given only the minimum permissions
+required to perform their tasks. Restricting access
+reduces the risk of unauthorized access, accidental
+changes and security incidents.
+
+Benefits :
+
+1. Protects sensitive information.
+2. Reduces security risks.
+3. Prevents accidental file modification.
+4. Improves overall system security.
+
+****************************************************************

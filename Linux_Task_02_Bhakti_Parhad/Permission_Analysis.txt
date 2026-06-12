@@ -1,0 +1,193 @@
+LINUX TASK 02 - SUMMER INTERNSHIP
+
+PART E - PERMISSION ANALYSIS
+
+Permission Basics :
+
+r = Read = 4
+w = Write = 2
+x = Execute = 1
+
+Permission Format :
+
+Owner | Group | Others
+
+Permission Values :
+
+0 = --- = No Permission
+1 = --x = Execute Only
+2 = -w- = Write Only
+3 = -wx = Write and Execute
+4 = r-- = Read Only
+5 = r-x = Read and Execute
+6 = rw- = Read and Write
+7 = rwx = Read, Write and Execute
+
+Calculation Examples :
+
+7 = 4 + 2 + 1 = rwx
+6 = 4 + 2 = rw-
+5 = 4 + 1 = r-x
+4 = 4 = r--
+0 = No Permission
+
+Example :
+
+755
+
+Owner Rights      : 7 = rwx
+Group Rights      : 5 = r-x
+Other User Rights : 5 = r-x
+
+****************************************************************
+
+1. Permission : 755
+
+Permission Breakdown :
+
+Owner Rights : rwx (Read, Write, Execute)
+Group Rights : r-x (Read, Execute)
+Other User Rights : r-x (Read, Execute)
+
+Real-world Use Case :
+
+Used for scripts, programs and website files where the owner can
+modify the file while other users can only read and execute it.
+
+Example :
+
+-rwxr-xr-x script.sh
+
+****************************************************************
+
+2. Permission : 644
+
+Permission Breakdown :
+
+Owner Rights : rw- (Read, Write)
+Group Rights : r-- (Read Only)
+Other User Rights : r-- (Read Only)
+
+Real-world Use Case :
+
+Used for documents, reports and configuration files where only
+the owner can make changes and everyone else can view the file.
+
+Example :
+
+-rw-r--r-- report.txt
+
+****************************************************************
+
+3. Permission : 777
+
+Permission Breakdown :
+
+Owner Rights : rwx (Read, Write, Execute)
+Group Rights : rwx (Read, Write, Execute)
+Other User Rights : rwx (Read, Write, Execute)
+
+Real-world Use Case :
+
+Used only for temporary testing environments. Not recommended
+for production systems because every user gets full control.
+
+Example :
+
+-rwxrwxrwx test.sh
+
+Security Risk :
+
+Any user can read, modify or delete the file.
+
+****************************************************************
+
+4. Permission : 600
+
+Permission Breakdown :
+
+Owner Rights : rw- (Read, Write)
+Group Rights : --- (No Access)
+Other User Rights : --- (No Access)
+
+Real-world Use Case :
+
+Used for password files, SSH private keys and confidential
+documents that should only be accessible by the owner.
+
+Example :
+
+-rw------- private_key
+
+****************************************************************
+
+5. Permission : 700
+
+Permission Breakdown :
+
+Owner Rights : rwx (Read, Write, Execute)
+Group Rights : --- (No Access)
+Other User Rights : --- (No Access)
+
+Real-world Use Case :
+
+Used for private scripts, personal directories and administrator
+files that should not be accessed by other users.
+
+Example :
+
+-rwx------ backup.sh
+
+****************************************************************
+
+PERMISSION SUMMARY
+
+755
+
+Owner Rights      : Read, Write, Execute
+Group Rights      : Read, Execute
+Other User Rights : Read, Execute
+
+Use Case : Scripts, website files and executable programs.
+
+****************************************************************
+
+644
+
+Owner Rights      : Read, Write
+Group Rights      : Read Only
+Other User Rights : Read Only
+
+Use Case : Reports, documents and configuration files.
+
+****************************************************************
+
+777
+
+Owner Rights      : Read, Write, Execute
+Group Rights      : Read, Write, Execute
+Other User Rights : Read, Write, Execute
+
+Use Case : Temporary testing only.
+
+****************************************************************
+
+600
+
+Owner Rights      : Read, Write
+Group Rights      : No Access
+Other User Rights : No Access
+
+Use Case : Password files, private keys and confidential data.
+
+****************************************************************
+
+700
+
+Owner Rights      : Read, Write, Execute
+Group Rights      : No Access
+Other User Rights : No Access
+
+Use Case : Private scripts and personal directories.
+
+****************************************************************

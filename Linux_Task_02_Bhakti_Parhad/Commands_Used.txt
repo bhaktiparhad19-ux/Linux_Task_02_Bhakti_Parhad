@@ -1,0 +1,257 @@
+LINUX TASK 02 - SUMMER INTERNSHIP
+
+COMMANDS USED
+
+****************************************************************
+
+PART A - UNDERSTANDING USERS
+
+1. whoami
+Purpose : Displays the currently logged-in username.
+Command : whoami
+Output : kali
+
+****************************************************************
+
+2. id
+Purpose : Displays user ID (UID), group ID (GID) and group
+membership information.
+Command : id
+Output : uid=1000(kali) gid=1000(kali)
+
+****************************************************************
+
+3. cat /etc/passwd
+Purpose : Displays information about all user accounts stored
+on the system.
+Command : cat /etc/passwd
+Output : root:x:0:0:root:root/root:/usr/bin/zsh
+
+****************************************************************
+
+PART B - CREATE USERS & GROUPS
+
+1. Create Group interns
+Purpose : Creates a new group named interns.
+Command : sudo groupadd interns
+Output : Group created successfully.
+
+****************************************************************
+
+2. Create Group cyberteam
+Purpose : Creates a new group named cyberteam.
+Command : sudo groupadd cyberteam
+Output : Group created successfully.
+
+****************************************************************
+
+3. Create User student1
+Purpose : Creates a new user account.
+Command : sudo useradd -m student1
+Output : User created successfully.
+
+****************************************************************
+
+4. Create User student2
+Purpose : Creates a new user account.
+Command : sudo useradd -m student2
+Output : User created successfully.
+
+****************************************************************
+
+5. Create User student3
+Purpose : Creates a new user account.
+Command : sudo useradd -m student3
+Output : User created successfully.
+
+****************************************************************
+
+6. Set Password for student1
+Purpose : Assigns a password to the user account.
+Command : sudo passwd student1
+Output : Password updated successfully.
+
+****************************************************************
+
+7. Set Password for student2
+Purpose : Assigns a password to the user account.
+Command : sudo passwd student2
+Output : Password updated successfully.
+
+****************************************************************
+
+8. Set Password for student3
+Purpose : Assigns a password to the user account.
+Command : sudo passwd student3
+Output : Password updated successfully.
+
+****************************************************************
+
+9. Add student1 to interns Group
+Purpose : Adds the user to a group.
+Command : sudo usermod -aG interns student1
+Output : User added successfully.
+
+****************************************************************
+
+10. Add student2 to cyberteam Group
+Purpose : Adds the user to a group.
+Command : sudo usermod -aG cyberteam student2
+Output : User added successfully.
+
+****************************************************************
+
+11. Add student3 to Multiple Groups
+Purpose : Adds the user to interns and cyberteam groups.
+Command : sudo usermod -aG interns,cyberteam student3
+Output : User added successfully.
+
+****************************************************************
+
+12. Verify User Groups
+Purpose : Displays group membership.
+Command : groups student1
+Output : student1 : student1 interns
+
+****************************************************************
+
+13. Verify User Information
+Purpose : Displays UID, GID and groups.
+Command : id student1
+Output : uid=1001(student1) gid=1003(student1) groups=1003(student1),1001(interns)
+
+****************************************************************
+
+14. Verify User Information
+Purpose : Displays UID, GID and groups.
+Command : id student2
+Output : uid=1002(student2) gid=1004(student2) groups=1004(student2),1002(cybercrime)
+
+****************************************************************
+
+PART C - FILE OWNERSHIP
+
+1. Create Project Directory
+Purpose : Creates a project folder.
+Command : mkdir CyberSecurity_Project
+Output : Directory created successfully.
+
+****************************************************************
+
+2. Enter Directory
+Purpose : Changes the current directory.
+Command : cd CyberSecurity_Project
+Output : Directory changed successfully.
+
+****************************************************************
+
+3. Create Files
+Purpose : Creates empty files.
+Command : touch report.txt notes.txt credentials.txt
+Output : Files created successfully.
+
+****************************************************************
+
+4. Check File Ownership
+Purpose : Displays file permissions and ownership.
+Command : ls -l
+Output : total 0
+         -rw-rw-r-- 1 kali kali 0 Jun 11 19:28 credentials.txt
+         -rw-rw-r-- 1 kali kali 0 Jun 11 19:28 notes.txt
+         -rw-rw-r-- 1 kali kali 0 Jun 11 19:28 report.txt
+
+****************************************************************
+
+5. Change File Ownership
+Purpose : Changes ownership of a file.
+Command : sudo chown student2 report.txt
+Output : Ownership changed successfully.
+
+****************************************************************
+
+6. Verify Ownership Change
+Purpose : Displays updated ownership information.
+Command : ls -l
+Output : total 0
+         -rw-rw-r-- 1 kali kali 0 Jun 11 19:28 credentials.txt
+         -rw-rw-r-- 1 kali kali 0 Jun 11 19:28 notes.txt
+         -rw-rw-r-- 1 student2 kali 0 Jun 11 19:28 report.txt
+
+****************************************************************
+
+PART D - FILE PERMISSIONS
+
+1. Create File
+Purpose : Creates an empty file.
+Command : touch security_policy.txt
+Output : File created successfully.
+
+****************************************************************
+
+2. Check File Permissions
+Purpose : Displays current permissions.
+Command : ls -l security_policy.txt
+Output : -rw-rw-r-- 1 kali kali 0 Jun 11 19:32 security_policy.txt
+
+****************************************************************
+
+3. Set Read Only Permission
+Purpose : Grants read-only access to everyone.
+Command : chmod 444 security_policy.txt
+Output : Permission changed successfully.
+
+****************************************************************
+
+4. Verify Permission
+Purpose : Displays updated permissions.
+Command : ls -l security_policy.txt
+Output : -r--r--r-- 1 kali kali 0 Jun 11 19:32 security_policy.txt
+
+****************************************************************
+
+5. Set Read and Write Permission
+Purpose : Grants read and write access to owner and group.
+Command : chmod 664 security_policy.txt
+Output : Permission changed successfully.
+
+****************************************************************
+
+6. Verify Permission
+Purpose : Displays updated permissions.
+Command : ls -l security_policy.txt
+Output : -rw-rw-r-- 1 kali kali 0 Jun 11 19:32 security_policy.txt
+
+****************************************************************
+
+7. Set Full Access Permission
+Purpose : Grants read, write and execute permissions to all users.
+Command : chmod 777 security_policy.txt
+Output : Permission changed successfully.
+
+****************************************************************
+
+8. Verify Permission
+Purpose : Displays updated permissions.
+Command : ls -l security_policy.txt
+Output : -rwxrwxrwx 1 kali kali 0 Jun 11 19:32 security_policy.txt
+
+****************************************************************
+
+SUMMARY OF IMPORTANT COMMANDS :
+
+whoami        : Displays current username
+id            : Displays UID, GID and groups
+cat           : Displays file contents
+groupadd      : Creates a new group
+useradd       : Creates a new user
+passwd        : Sets user password
+usermod       : Modifies user group membership
+groups        : Displays user groups
+mkdir         : Creates directories
+cd            : Changes directory
+touch         : Creates files
+ls -l         : Displays permissions and ownership
+chown         : Changes file ownership
+chmod         : Changes file permissions
+
+****************************************************************
