@@ -2,11 +2,11 @@
 
 ## Student Information
 
-**Name:** Bhakti Mahadev Parhad
+**Name :** Bhakti Mahadev Parhad
 
-**Internship:** White Band Associates Summer Internship - Cyber Security
+**Internship :** White Band Associates Summer Internship - Cyber Security
 
-**Task:** Linux Task 02 - Users, Groups & File Permissions
+**Task :** Linux Task 02 - Users, Groups & File Permissions
 
 ---
 
@@ -49,6 +49,12 @@ cat /etc/passwd
 
 ![cat\_etc\_passwd](Linux_Task_02_Bhakti_Parhad/Screenshots_linux_02/cat_etc_passwd.png)
 
+## Answers
+
+* Current logged-in user is **kali.**
+* User ID (UID) is **1000(kali).**
+* Group ID (GID) is **1000(kali).**
+* Displays information about all user accounts stored on the system.
 ---
 
 # Part B - Create Users & Groups
@@ -111,6 +117,12 @@ credentials.txt
 
 ![file\_ownership\_before](Linux_Task_02_Bhakti_Parhad/Screenshots_linux_02/file_ownership.png)
 
+## Answers
+
+* Original Owner is **kali.**
+* New Owner is **student2.**
+* Command Used **sudo chown student2 report.txt**
+  
 ---
 
 # Part D - File Permissions
@@ -192,7 +204,7 @@ The permissions were selected based on security requirements and the Principle o
 Detailed answers are available in:
 
 ```text
-Security_Challenge.txt
+Security_Challenge_Answers.txt
 ```
 
 ---
