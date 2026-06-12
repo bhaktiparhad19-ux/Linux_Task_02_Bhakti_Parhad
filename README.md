@@ -3,7 +3,9 @@
 ## Student Information
 
 **Name:** Bhakti Mahadev Parhad
+
 **Internship:** White Band Associates Summer Internship Cyber Security
+
 **Task:** Linux Task 02 - Users, Groups & File Permissions
 
 ---
