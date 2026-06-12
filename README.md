@@ -1,205 +1,223 @@
-# Linux Task 01 - Linux Environment Setup & Essential Commands
+# Linux Task 02 - Users, Groups & File Permissions
 
-## White Band Associates Summer Internship 2026 - Cyber Security
+## Student Information
 
-**Name:** Bhakti Parhad
-**Task:** Linux Task 01
-**Domain:** Cyber Security
-**Operating System Used:** Kali Linux
-**Environment:** Virtual Machine
+**Name:** Bhakti Mahadev Parhad
+**Internship:** White Band Associates Summer Internship Cyber Security
+**Task:** Linux Task 02 - Users, Groups & File Permissions
 
 ---
 
-## Objective
+# Objective
 
-The objective of this task was to gain hands-on experience with the Linux operating system, terminal navigation, directory management, file management, and system information commands.
+The purpose of this task is to understand Linux user management, groups, file ownership, and file permissions.
 
-Linux is one of the most important operating systems used in Cyber Security, Ethical Hacking, System Administration, Cloud Computing, and Server Management.
-
----
-
-## Tasks Performed
-
-### Part A: Linux Installation & Verification
-
-* Installed Kali Linux in a Virtual Machine.
-* Verified successful installation.
-* Explored the Linux desktop environment.
-* Opened and used the terminal.
-* Collected system information.
-
-#### Screenshots
-
-##### Desktop Environment
-
-![Desktop Environment](Screenshots_linux_01/Desktop_Environment.png)
-
-##### Terminal Window
-
-![Terminal Window](Screenshots_linux_01/Terminal_Window.png)
-
-##### System Information
-
-![System Information](Screenshots_linux_01/System_Information.png)
+These concepts form the foundation of Linux security and system administration.
 
 ---
 
-### Part B: Basic Navigation Commands
+# Folder Structure
 
-The following Linux commands were executed and studied:
+Linux_Task_02_Bhakti_Parhad/
 
-| Command  | Description                           |
-| -------- | ------------------------------------- |
-| pwd      | Display current working directory     |
-| ls       | List files and directories            |
-| ls -la   | List all files including hidden files |
-| cd       | Change directory                      |
-| clear    | Clear terminal screen                 |
-| history  | Show command history                  |
-| whoami   | Display current username              |
-| hostname | Display system hostname               |
+├── README.md
 
-#### Screenshots
+├── Commands_Used.txt
 
-##### pwd
+├── Permission_Analysis.txt
 
-![pwd](Screenshots_linux_01/pwd.png)
+├── Security_Challenge_Answers.txt
 
-##### ls
+├── Research_Answers.txt
 
-![ls](Screenshots_linux_01/ls.png)
+└── Screenshots_linux_02/
 
-##### ls -la
+    ├── whoami.png
 
-![ls -la](Screenshots_linux_01/ls_la.png)
+    ├── id.png
 
-##### cd
+    ├── cat_etc_passwd.png
 
-![cd](Screenshots_linux_01/cd.png)
+    ├── groups_users.png
 
-##### clear
+    ├── group_user_verification.png
 
-![clear](Screenshots_linux_01/clear.png)
+    ├── file_ownership.png
 
-##### history
-
-![history](Screenshots_linux_01/history.png)
-
-##### whoami
-
-![whoami](Screenshots_linux_01/whoami.png)
-
-##### hostname
-
-![hostname](Screenshots_linux_01/hostname.png)
+    ├── file_permissions.png
 
 ---
 
-### Part C: Directory Management
+# Part A - Understanding Users
 
-Created the following directory structure:
+Commands Executed:
+
+```bash
+whoami
+id
+cat /etc/passwd
+```
+
+Tasks Completed:
+
+* Identified current username.
+* Observed User ID (UID).
+* Observed Group ID (GID).
+* Reviewed user account information stored in /etc/passwd.
+
+Screenshots:
+
+* whoami.png
+* id.png
+* cat_etc_passwd.png
+
+---
+
+# Part B - Create Users & Groups
+
+Groups Created:
+
+* interns
+* cyberteam
+
+Users Created:
+
+* student1
+* student2
+* student3
+
+Tasks Completed:
+
+* Created groups.
+* Created users.
+* Assigned users to groups.
+* Verified group membership using groups and id commands.
+
+Screenshots:
+
+* groups_users.png
+* group_user_verification.png
+
+---
+
+# Part C - File Ownership
+
+Project Directory Created:
 
 ```text
-CyberSecurity_Lab
-├── Networking
-├── Linux
-├── CyberSecurity
-├── EthicalHacking
-└── Reports
+CyberSecurity_Project
 ```
 
-Commands used:
+Files Created:
 
-```bash
-mkdir -p CyberSecurity_Lab/{Networking,Linux,CyberSecurity,EthicalHacking,Reports}
-tree CyberSecurity_Lab
+```text
+report.txt
+notes.txt
+credentials.txt
 ```
 
-#### Screenshots
+Tasks Completed:
 
-##### mkdir Command
+* Verified file ownership using ls -l.
+* Changed ownership of a file using chown.
+* Verified ownership changes.
 
-![mkdir](Screenshots_linux_01/mkdir.png)
+Screenshot:
 
-##### tree Command
-
-![tree](Screenshots_linux_01/tree.png)
+* file_ownership_file_permission.png
 
 ---
 
-### Part D: File Management
+# Part D - File Permissions
 
-Performed the following operations:
+File Created:
 
-* Created files
-* Copied files
-* Renamed files
-* Moved files
-* Deleted files
-
-Commands used:
-
-```bash
-touch
-cp
-mv
-rm
+```text
+security_policy.txt
 ```
 
-#### Screenshot
+Permission Changes Performed:
 
-![File Operations](Screenshots_linux_01/file_operations.png)
+| Permission Type | Permission |
+| --------------- | ---------- |
+| Read Only       | r--r--r--  |
+| Read & Write    | rw-rw-r--  |
+| Full Access     | rwxrwxrwx  |
+
+Commands Used:
+
+```bash
+chmod 444 security_policy.txt
+chmod 664 security_policy.txt
+chmod 777 security_policy.txt
+```
+
+Tasks Completed:
+
+* Checked existing permissions.
+* Modified permissions using chmod.
+* Verified permission changes using ls -l.
+
+Screenshot:
+
+* file_ownership_file_permission.png
 
 ---
 
-### Part E: System Information Collection
+# Part E - Permission Analysis
 
-Executed the following commands:
+Permissions Studied:
 
-```bash
-uname -a
-hostname
-whoami
-date
-uptime
-pwd
+* 755
+* 644
+* 777
+* 600
+* 700
+
+For each permission the following were analyzed:
+
+* Owner Rights
+* Group Rights
+* Other User Rights
+* Real-world Use Cases
+
+Detailed analysis is available in:
+
+```text
+Permission_Analysis.txt
 ```
-
-Information collected:
-
-* Kernel Version
-* Username
-* Current Directory
-* Current Date and Time
-* System Uptime
-
-#### Screenshots
-
-##### uname -a
-
-![uname -a](Screenshots_linux_01/uname_a.png)
-
-##### date
-
-![date](Screenshots_linux_01/date.png)
-
-##### uptime
-
-![uptime](Screenshots_linux_01/uptime.png)
 
 ---
 
-### Part F: Linux Research Activity
+# Part F - Security Challenge
 
-Topics researched:
+Recommended permissions were assigned for:
 
-1. What is Linux?
-2. Why is Linux important in Cyber Security?
-3. Difference between Linux and Windows
-4. What is a Linux Distribution?
-5. Why Ethical Hackers prefer Linux-based Operating Systems
+* password_backup.txt
+* public_notice.txt
+* system_log.txt
+* personal_notes.txt
 
-The detailed answers are available in:
+Each permission was selected based on security requirements and the Principle of Least Privilege.
+
+Detailed answers are available in:
+
+```text
+Security_Challenge.txt
+```
+
+---
+
+# Part G - Linux Security Research
+
+Research Topics Covered:
+
+* Importance of File Permissions
+* Risks of 777 Permissions
+* Principle of Least Privilege (PoLP)
+* Reasons Organizations Restrict User Access
+
+Detailed answers are available in:
 
 ```text
 Research_Answers.txt
@@ -207,54 +225,28 @@ Research_Answers.txt
 
 ---
 
-## Repository Structure
+# Concepts Learned
 
-```text
-Linux_Task_01_Bhakti_Parhad
-│
-├── Screenshots_linux_01
-│   ├── Desktop_Environment.png
-│   ├── Terminal_Window.png
-│   ├── System_Information.png
-│   ├── pwd.png
-│   ├── ls.png
-│   ├── ls_la.png
-│   ├── cd.png
-│   ├── clear.png
-│   ├── history.png
-│   ├── whoami.png
-│   ├── hostname.png
-│   ├── date.png
-│   ├── file_operations.png
-│   ├── mkdir.png
-│   ├── tree.png
-│   ├── uname_a.png
-│   └── uptime.png
-│
-├── Command_Outputs.txt
-├── Linux_Notes_Task_01.txt
-├── Research_Answers.txt
-└── README.md
-```
+During this task I learned:
+
+* Linux Users and Groups
+* User Management
+* Group Management
+* File Ownership
+* File Permissions
+* chmod Command
+* chown Command
+* Numeric Permissions
+* Symbolic Permissions
+* Principle of Least Privilege
+* Linux Security Basics
 
 ---
 
-## Learning Outcomes
+# Conclusion
 
-Through this task, I learned:
+This task provided hands-on experience with Linux user management, group management, file ownership, and permissions.
 
-* Linux installation and setup
-* Linux terminal basics
-* Navigation commands
-* Directory management
-* File management operations
-* System information commands
-* Linux file system fundamentals
-* Importance of Linux in Cyber Security
+Understanding these concepts is essential for securing Linux systems and forms a strong foundation for future cybersecurity and system administration tasks.
 
 ---
-
-## Author
-
-**Bhakti Parhad**
-Cyber Security Intern
